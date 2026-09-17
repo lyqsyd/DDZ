@@ -1,0 +1,357 @@
+== 连接服务器 ws://localhost:9888 ==
+
+-- S1 大厅/房间边界 --
+  房间号: K5HE5
+
+-- S2 对局1：越界叫分/非法出牌 --
+    [房主A] -> startGame {}
+    [房主A] <- gameStart {"seat":0,"hand":[1,2,5,8,9,11,13,17,20,23,24,33,39,41,43,44,51],"bottomCount":3,"callingSeat":1,"type":"gameStart"}
+    [房主A] -> bid {"bid":3}
+    [房主A] <- bidTurn {"seat":1,"type":"bidTurn"}
+    [房主A] <- bidResult {"seat":1,"name":"机器人 · 阿喜","bid":2,"type":"bidResult"}
+    [房主A] <- bidTurn {"seat":2,"type":"bidTurn"}
+    [房主A] <- bidResult {"seat":2,"name":"机器人 · 阿财","bid":3,"type":"bidResult"}
+    [房主A] <- landlordSet {"landlordSeat":2,"bottomCards":[47,4,22],"hand":[1,2,5,8,9,11,13,17,20,23,24,33,39,41,43,44,51],"seat":0,"type":"landlordSet"}
+    [房主A] <- system {"message":"机器人 · 阿财 成为地主，叫 3 分","type":"system"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":null,"lastSeat":-1,"type":"playTurn"}
+    [房主A] <- played {"seat":2,"name":"机器人 · 阿财","cards":[21,22,25,26,28,29],"typeName":"连对","typeKey":"pairs","multiplier":1,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":[21,22,25,26,28,29],"lastSeat":2,"type":"playTurn"}
+    [房主A] -> pass {}
+    [房主A] <- passed {"seat":0,"name":"测试房主","type":"passed"}
+    [房主A] <- playTurn {"seat":1,"lastPlay":[21,22,25,26,28,29],"lastSeat":2,"type":"playTurn"}
+    [房主A] <- passed {"seat":1,"name":"机器人 · 阿喜","type":"passed"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":null,"lastSeat":-1,"type":"playTurn"}
+    [房主A] <- played {"seat":2,"name":"机器人 · 阿财","cards":[4,6,7,30,31],"typeName":"三带二","typeKey":"triple2","multiplier":1,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":[4,6,7,30,31],"lastSeat":2,"type":"playTurn"}
+    [房主A] -> play {"cards":[8,9,11,1,2]}
+    [房主A] <- played {"seat":0,"name":"测试房主","cards":[8,9,11,1,2],"typeName":"三带二","typeKey":"triple2","multiplier":1,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":1,"lastPlay":[8,9,11,1,2],"lastSeat":0,"type":"playTurn"}
+    [房主A] <- played {"seat":1,"name":"机器人 · 阿喜","cards":[32,34,35,0,3],"typeName":"三带二","typeKey":"triple2","multiplier":1,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":[32,34,35,0,3],"lastSeat":1,"type":"playTurn"}
+    [房主A] <- played {"seat":2,"name":"机器人 · 阿财","cards":[52,53],"typeName":"王炸","typeKey":"rocket","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":[52,53],"lastSeat":2,"type":"playTurn"}
+    [房主A] -> pass {}
+    [房主A] <- passed {"seat":0,"name":"测试房主","type":"passed"}
+    [房主A] <- playTurn {"seat":1,"lastPlay":[52,53],"lastSeat":2,"type":"playTurn"}
+    [房主A] <- passed {"seat":1,"name":"机器人 · 阿喜","type":"passed"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":null,"lastSeat":-1,"type":"playTurn"}
+    [房主A] <- played {"seat":2,"name":"机器人 · 阿财","cards":[10],"typeName":"单张","typeKey":"single","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":[10],"lastSeat":2,"type":"playTurn"}
+    [房主A] -> play {"cards":[13]}
+    [房主A] <- played {"seat":0,"name":"测试房主","cards":[13],"typeName":"单张","typeKey":"single","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":1,"lastPlay":[13],"lastSeat":0,"type":"playTurn"}
+    [房主A] <- played {"seat":1,"name":"机器人 · 阿喜","cards":[18],"typeName":"单张","typeKey":"single","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":[18],"lastSeat":1,"type":"playTurn"}
+    [房主A] <- played {"seat":2,"name":"机器人 · 阿财","cards":[38],"typeName":"单张","typeKey":"single","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":[38],"lastSeat":2,"type":"playTurn"}
+    [房主A] -> play {"cards":[41]}
+    [房主A] <- played {"seat":0,"name":"测试房主","cards":[41],"typeName":"单张","typeKey":"single","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":1,"lastPlay":[41],"lastSeat":0,"type":"playTurn"}
+    [房主A] <- played {"seat":1,"name":"机器人 · 阿喜","cards":[45],"typeName":"单张","typeKey":"single","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":[45],"lastSeat":1,"type":"playTurn"}
+    [房主A] <- played {"seat":2,"name":"机器人 · 阿财","cards":[50],"typeName":"单张","typeKey":"single","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":[50],"lastSeat":2,"type":"playTurn"}
+    [房主A] -> pass {}
+    [房主A] <- passed {"seat":0,"name":"测试房主","type":"passed"}
+    [房主A] <- playTurn {"seat":1,"lastPlay":[50],"lastSeat":2,"type":"playTurn"}
+    [房主A] <- passed {"seat":1,"name":"机器人 · 阿喜","type":"passed"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":null,"lastSeat":-1,"type":"playTurn"}
+    [房主A] <- played {"seat":2,"name":"机器人 · 阿财","cards":[14],"typeName":"单张","typeKey":"single","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":[14],"lastSeat":2,"type":"playTurn"}
+    [房主A] -> play {"cards":[17]}
+    [房主A] <- played {"seat":0,"name":"测试房主","cards":[17],"typeName":"单张","typeKey":"single","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":1,"lastPlay":[17],"lastSeat":0,"type":"playTurn"}
+    [房主A] <- played {"seat":1,"name":"机器人 · 阿喜","cards":[27],"typeName":"单张","typeKey":"single","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":[27],"lastSeat":1,"type":"playTurn"}
+    [房主A] <- played {"seat":2,"name":"机器人 · 阿财","cards":[40],"typeName":"单张","typeKey":"single","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":[40],"lastSeat":2,"type":"playTurn"}
+    [房主A] -> play {"cards":[44]}
+    [房主A] <- played {"seat":0,"name":"测试房主","cards":[44],"typeName":"单张","typeKey":"single","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":1,"lastPlay":[44],"lastSeat":0,"type":"playTurn"}
+    [房主A] <- played {"seat":1,"name":"机器人 · 阿喜","cards":[48],"typeName":"单张","typeKey":"single","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":[48],"lastSeat":1,"type":"playTurn"}
+    [房主A] <- passed {"seat":2,"name":"机器人 · 阿财","type":"passed"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":[48],"lastSeat":1,"type":"playTurn"}
+    [房主A] -> pass {}
+    [房主A] <- passed {"seat":0,"name":"测试房主","type":"passed"}
+    [房主A] <- playTurn {"seat":1,"lastPlay":null,"lastSeat":-1,"type":"playTurn"}
+    [房主A] <- played {"seat":1,"name":"机器人 · 阿喜","cards":[12,15],"typeName":"对子","typeKey":"pair","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":[12,15],"lastSeat":1,"type":"playTurn"}
+    [房主A] <- passed {"seat":2,"name":"机器人 · 阿财","type":"passed"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":[12,15],"lastSeat":1,"type":"playTurn"}
+    [房主A] -> play {"cards":[20,23]}
+    [房主A] <- played {"seat":0,"name":"测试房主","cards":[20,23],"typeName":"对子","typeKey":"pair","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":1,"lastPlay":[20,23],"lastSeat":0,"type":"playTurn"}
+    [房主A] <- played {"seat":1,"name":"机器人 · 阿喜","cards":[36,37],"typeName":"对子","typeKey":"pair","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":[36,37],"lastSeat":1,"type":"playTurn"}
+    [房主A] <- passed {"seat":2,"name":"机器人 · 阿财","type":"passed"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":[36,37],"lastSeat":1,"type":"playTurn"}
+    [房主A] -> pass {}
+    [房主A] <- passed {"seat":0,"name":"测试房主","type":"passed"}
+    [房主A] <- playTurn {"seat":1,"lastPlay":null,"lastSeat":-1,"type":"playTurn"}
+    [房主A] <- played {"seat":1,"name":"机器人 · 阿喜","cards":[19],"typeName":"单张","typeKey":"single","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":[19],"lastSeat":1,"type":"playTurn"}
+    [房主A] <- played {"seat":2,"name":"机器人 · 阿财","cards":[47],"typeName":"单张","typeKey":"single","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":[47],"lastSeat":2,"type":"playTurn"}
+    [房主A] -> play {"cards":[51]}
+    [房主A] <- played {"seat":0,"name":"测试房主","cards":[51],"typeName":"单张","typeKey":"single","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":1,"lastPlay":[51],"lastSeat":0,"type":"playTurn"}
+    [房主A] <- passed {"seat":1,"name":"机器人 · 阿喜","type":"passed"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":[51],"lastSeat":0,"type":"playTurn"}
+    [房主A] <- passed {"seat":2,"name":"机器人 · 阿财","type":"passed"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":null,"lastSeat":-1,"type":"playTurn"}
+    [房主A] -> play {"cards":[9999]}
+    [房主A] -> play {"cards":[]}
+    [房主A] -> pass {}
+    [房主A] -> play {"cards":[5]}
+    [房主A] <- invalid {"message":"出牌不合法","type":"invalid"}
+    [房主A] <- invalid {"message":"出牌不合法","type":"invalid"}
+    [房主A] <- invalid {"message":"必须出牌","type":"invalid"}
+    [房主A] <- played {"seat":0,"name":"测试房主","cards":[5],"typeName":"单张","typeKey":"single","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":1,"lastPlay":[5],"lastSeat":0,"type":"playTurn"}
+    [房主A] <- played {"seat":1,"name":"机器人 · 阿喜","cards":[42],"typeName":"单张","typeKey":"single","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":[42],"lastSeat":1,"type":"playTurn"}
+    [房主A] <- passed {"seat":2,"name":"机器人 · 阿财","type":"passed"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":[42],"lastSeat":1,"type":"playTurn"}
+    [房主A] -> pass {}
+    [房主A] <- passed {"seat":0,"name":"测试房主","type":"passed"}
+    [房主A] <- playTurn {"seat":1,"lastPlay":null,"lastSeat":-1,"type":"playTurn"}
+    [房主A] <- played {"seat":1,"name":"机器人 · 阿喜","cards":[46],"typeName":"单张","typeKey":"single","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":[46],"lastSeat":1,"type":"playTurn"}
+    [房主A] <- passed {"seat":2,"name":"机器人 · 阿财","type":"passed"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":[46],"lastSeat":1,"type":"playTurn"}
+    [房主A] -> pass {}
+    [房主A] <- passed {"seat":0,"name":"测试房主","type":"passed"}
+    [房主A] <- playTurn {"seat":1,"lastPlay":null,"lastSeat":-1,"type":"playTurn"}
+    [房主A] <- played {"seat":1,"name":"机器人 · 阿喜","cards":[49],"typeName":"单张","typeKey":"single","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- gameOver {"winnerSeat":1,"landlordSeat":2,"winnerIsLandlord":false,"multiplier":2,"base":3,"score":{"0":6,"1":6,"2":-12},"revealHands":{"0":[24,33,39,43],"1":[],"2":[16]
+  对局1结束, winner= 1 score= {"0":6,"1":6,"2":-12} base=3 mult=2
+
+-- S3 对局2：restart + 连续两次出牌 --
+    [房主A] -> restart {}
+    [房主A] <- gameStart {"seat":0,"hand":[0,3,6,11,14,23,26,27,32,34,41,43,44,48,49,51,53],"bottomCount":3,"callingSeat":2,"type":"gameStart"}
+    [房主A] <- bidTurn {"seat":2,"type":"bidTurn"}
+    [房主A] <- bidResult {"seat":2,"name":"机器人 · 阿财","bid":2,"type":"bidResult"}
+    [房主A] <- bidTurn {"seat":0,"type":"bidTurn"}
+    [房主A] -> bid {"bid":3}
+    [房主A] <- bidResult {"seat":0,"name":"测试房主","bid":3,"type":"bidResult"}
+    [房主A] <- landlordSet {"landlordSeat":0,"bottomCards":[10,12,47],"hand":[0,3,6,10,11,12,14,23,26,27,32,34,41,43,44,47,48,49,51,53],"seat":0,"type":"landlordSet"}
+    [房主A] <- system {"message":"测试房主 成为地主，叫 3 分","type":"system"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":null,"lastSeat":-1,"type":"playTurn"}
+    [房主A] -> play {"cards":[48,49,51,0,3]}
+    [房主A] -> play {"cards":[48,49,51,0,3]}
+    [房主A] <- played {"seat":0,"name":"测试房主","cards":[48,49,51,0,3],"typeName":"三带二","typeKey":"triple2","multiplier":1,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":1,"lastPlay":[48,49,51,0,3],"lastSeat":0,"type":"playTurn"}
+    [房主A] <- passed {"seat":1,"name":"机器人 · 阿喜","type":"passed"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":[48,49,51,0,3],"lastSeat":0,"type":"playTurn"}
+    [房主A] <- passed {"seat":2,"name":"机器人 · 阿财","type":"passed"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":null,"lastSeat":-1,"type":"playTurn"}
+    [房主A] -> play {"cards":[10,11]}
+    [房主A] <- played {"seat":0,"name":"测试房主","cards":[10,11],"typeName":"对子","typeKey":"pair","multiplier":1,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":1,"lastPlay":[10,11],"lastSeat":0,"type":"playTurn"}
+    [房主A] <- played {"seat":1,"name":"机器人 · 阿喜","cards":[18,19],"typeName":"对子","typeKey":"pair","multiplier":1,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":[18,19],"lastSeat":1,"type":"playTurn"}
+    [房主A] <- played {"seat":2,"name":"机器人 · 阿财","cards":[20,21],"typeName":"对子","typeKey":"pair","multiplier":1,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":[20,21],"lastSeat":2,"type":"playTurn"}
+    [房主A] -> play {"cards":[26,27]}
+    [房主A] <- played {"seat":0,"name":"测试房主","cards":[26,27],"typeName":"对子","typeKey":"pair","multiplier":1,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":1,"lastPlay":[26,27],"lastSeat":0,"type":"playTurn"}
+    [房主A] <- played {"seat":1,"name":"机器人 · 阿喜","cards":[30,31],"typeName":"对子","typeKey":"pair","multiplier":1,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":[30,31],"lastSeat":1,"type":"playTurn"}
+    [房主A] <- passed {"seat":2,"name":"机器人 · 阿财","type":"passed"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":[30,31],"lastSeat":1,"type":"playTurn"}
+    [房主A] -> play {"cards":[32,34]}
+    [房主A] <- played {"seat":0,"name":"测试房主","cards":[32,34],"typeName":"对子","typeKey":"pair","multiplier":1,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":1,"lastPlay":[32,34],"lastSeat":0,"type":"playTurn"}
+    [房主A] <- played {"seat":1,"name":"机器人 · 阿喜","cards":[36,37],"typeName":"对子","typeKey":"pair","multiplier":1,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":[36,37],"lastSeat":1,"type":"playTurn"}
+    [房主A] <- passed {"seat":2,"name":"机器人 · 阿财","type":"passed"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":[36,37],"lastSeat":1,"type":"playTurn"}
+    [房主A] -> play {"cards":[41,43]}
+    [房主A] <- played {"seat":0,"name":"测试房主","cards":[41,43],"typeName":"对子","typeKey":"pair","multiplier":1,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":1,"lastPlay":[41,43],"lastSeat":0,"type":"playTurn"}
+    [房主A] <- passed {"seat":1,"name":"机器人 · 阿喜","type":"passed"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":[41,43],"lastSeat":0,"type":"playTurn"}
+    [房主A] <- passed {"seat":2,"name":"机器人 · 阿财","type":"passed"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":null,"lastSeat":-1,"type":"playTurn"}
+    [房主A] -> play {"cards":[12,14]}
+    [房主A] <- played {"seat":0,"name":"测试房主","cards":[12,14],"typeName":"对子","typeKey":"pair","multiplier":1,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":1,"lastPlay":[12,14],"lastSeat":0,"type":"playTurn"}
+    [房主A] <- passed {"seat":1,"name":"机器人 · 阿喜","type":"passed"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":[12,14],"lastSeat":0,"type":"playTurn"}
+    [房主A] <- played {"seat":2,"name":"机器人 · 阿财","cards":[16,17],"typeName":"对子","typeKey":"pair","multiplier":1,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":[16,17],"lastSeat":2,"type":"playTurn"}
+    [房主A] -> play {"cards":[44,47]}
+    [房主A] <- played {"seat":0,"name":"测试房主","cards":[44,47],"typeName":"对子","typeKey":"pair","multiplier":1,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":1,"lastPlay":[44,47],"lastSeat":0,"type":"playTurn"}
+    [房主A] <- passed {"seat":1,"name":"机器人 · 阿喜","type":"passed"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":[44,47],"lastSeat":0,"type":"playTurn"}
+    [房主A] <- passed {"seat":2,"name":"机器人 · 阿财","type":"passed"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":null,"lastSeat":-1,"type":"playTurn"}
+    [房主A] -> play {"cards":[6]}
+    [房主A] <- played {"seat":0,"name":"测试房主","cards":[6],"typeName":"单张","typeKey":"single","multiplier":1,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":1,"lastPlay":[6],"lastSeat":0,"type":"playTurn"}
+    [房主A] <- played {"seat":1,"name":"机器人 · 阿喜","cards":[8],"typeName":"单张","typeKey":"single","multiplier":1,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":[8],"lastSeat":1,"type":"playTurn"}
+    [房主A] <- played {"seat":2,"name":"机器人 · 阿财","cards":[15],"typeName":"单张","typeKey":"single","multiplier":1,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":[15],"lastSeat":2,"type":"playTurn"}
+    [房主A] -> play {"cards":[23]}
+    [房主A] <- played {"seat":0,"name":"测试房主","cards":[23],"typeName":"单张","typeKey":"single","multiplier":1,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":1,"lastPlay":[23],"lastSeat":0,"type":"playTurn"}
+    [房主A] <- played {"seat":1,"name":"机器人 · 阿喜","cards":[25],"typeName":"单张","typeKey":"single","multiplier":1,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":[25],"lastSeat":1,"type":"playTurn"}
+    [房主A] <- played {"seat":2,"name":"机器人 · 阿财","cards":[28],"typeName":"单张","typeKey":"single","multiplier":1,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":[28],"lastSeat":2,"type":"playTurn"}
+    [房主A] -> play {"cards":[53]}
+    [房主A] <- played {"seat":0,"name":"测试房主","cards":[53],"typeName":"单张","typeKey":"single","multiplier":1,"type":"played","_rawType":"played"}
+    [房主A] <- gameOver {"winnerSeat":0,"landlordSeat":0,"winnerIsLandlord":true,"multiplier":1,"base":3,"score":{"0":6,"1":-3,"2":-3},"revealHands":{"0":[],"1":[2,4,5,13,35,39,40,46,5
+  对局2结束, winner= 0 score= {"0":6,"1":-3,"2":-3} base=3 mult=1
+
+-- S4 结束状态房间不可加入 --
+  已拒绝: 房间在 over 状态不可加入
+
+-- S5 房主离开 → 解散 --
+    [房主A] -> leaveRoom {}
+    [房主A] <- roomClosed {"type":"roomClosed"}
+    [房主A] <- roomList {"rooms":[],"type":"roomList"}
+  已确认: 房主离开后房间被解散
+
+-- S6 游戏中玩家掉线 → AI接管 --
+    [房主A] -> createRoom {}
+    [房主A] <- roomState {"room":{"roomId":"3LPAP","state":"waiting","players":[{"name":"测试房主","isAI":false},null,null],"hostId":"317fte63"},"youSeat":0,"type":"roomState"}
+    [房主A] <- roomList {"rooms":[{"roomId":"3LPAP","players":1,"isFull":false}],"type":"roomList"}
+    [房主A] -> addAI {}
+    [房主A] <- roomState {"room":{"roomId":"3LPAP","state":"waiting","players":[{"name":"测试房主","isAI":false},{"name":"测试B","isAI":false},null],"hostId":"317fte63"},"youSeat":0,"type":"r
+    [房主A] <- roomList {"rooms":[{"roomId":"3LPAP","players":2,"isFull":false}],"type":"roomList"}
+    [房主A] <- roomState {"room":{"roomId":"3LPAP","state":"waiting","players":[{"name":"测试房主","isAI":false},{"name":"测试B","isAI":false},{"name":"机器人 · 阿财","isAI":true}],"hostId":"317ft
+    [房主A] -> startGame {}
+    [房主A] <- roomList {"rooms":[{"roomId":"3LPAP","players":3,"isFull":true}],"type":"roomList"}
+    [房主A] <- gameStart {"seat":0,"hand":[0,2,9,11,14,17,20,29,32,33,37,38,41,42,44,46,47],"bottomCount":3,"callingSeat":1,"type":"gameStart"}
+    [房主A] <- bidTurn {"seat":1,"type":"bidTurn"}
+    [房主A] <- bidResult {"seat":1,"name":"测试B","bid":2,"type":"bidResult"}
+    [房主A] <- bidTurn {"seat":2,"type":"bidTurn"}
+    [房主A] <- bidResult {"seat":2,"name":"机器人 · 阿财","bid":3,"type":"bidResult"}
+    [房主A] <- landlordSet {"landlordSeat":2,"bottomCards":[52,27,24],"hand":[0,2,9,11,14,17,20,29,32,33,37,38,41,42,44,46,47],"seat":0,"type":"landlordSet"}
+    [房主A] <- system {"message":"机器人 · 阿财 成为地主，叫 3 分","type":"system"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":null,"lastSeat":-1,"type":"playTurn"}
+    [房主A] <- system {"message":"测试B 离开，由 AI 接管","type":"system"}
+    [房主A] <- roomState {"room":{"roomId":"3LPAP","state":"playing","players":[{"name":"测试房主","isAI":false},{"name":"机器人 · 阿喜","isAI":true},{"name":"机器人 · 阿财","isAI":true}],"hostId":"3
+    [房主A] <- roomList {"rooms":[],"type":"roomList"}
+  已确认: B掉线后由AI接管
+    [房主A] <- played {"seat":2,"name":"机器人 · 阿财","cards":[24,25,30,31,34,35],"typeName":"连对","typeKey":"pairs","multiplier":1,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":[24,25,30,31,34,35],"lastSeat":2,"type":"playTurn"}
+    [房主A] -> play {"cards":[32,33,37,38,41,42]}
+    [房主A] <- played {"seat":0,"name":"测试房主","cards":[32,33,37,38,41,42],"typeName":"连对","typeKey":"pairs","multiplier":1,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":1,"lastPlay":[32,33,37,38,41,42],"lastSeat":0,"type":"playTurn"}
+    [房主A] <- passed {"seat":1,"name":"机器人 · 阿喜","type":"passed"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":[32,33,37,38,41,42],"lastSeat":0,"type":"playTurn"}
+    [房主A] <- played {"seat":2,"name":"机器人 · 阿财","cards":[52,53],"typeName":"王炸","typeKey":"rocket","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":[52,53],"lastSeat":2,"type":"playTurn"}
+    [房主A] -> pass {}
+    [房主A] <- passed {"seat":0,"name":"测试房主","type":"passed"}
+    [房主A] <- playTurn {"seat":1,"lastPlay":[52,53],"lastSeat":2,"type":"playTurn"}
+    [房主A] <- passed {"seat":1,"name":"机器人 · 阿喜","type":"passed"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":null,"lastSeat":-1,"type":"playTurn"}
+    [房主A] <- played {"seat":2,"name":"机器人 · 阿财","cards":[1,4,8,12,18],"typeName":"顺子","typeKey":"straight","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":[1,4,8,12,18],"lastSeat":2,"type":"playTurn"}
+    [房主A] -> pass {}
+    [房主A] <- passed {"seat":0,"name":"测试房主","type":"passed"}
+    [房主A] <- playTurn {"seat":1,"lastPlay":[1,4,8,12,18],"lastSeat":2,"type":"playTurn"}
+    [房主A] <- played {"seat":1,"name":"机器人 · 阿喜","cards":[6,10,13,16,21],"typeName":"顺子","typeKey":"straight","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":[6,10,13,16,21],"lastSeat":1,"type":"playTurn"}
+    [房主A] <- passed {"seat":2,"name":"机器人 · 阿财","type":"passed"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":[6,10,13,16,21],"lastSeat":1,"type":"playTurn"}
+    [房主A] -> pass {}
+    [房主A] <- passed {"seat":0,"name":"测试房主","type":"passed"}
+    [房主A] <- playTurn {"seat":1,"lastPlay":null,"lastSeat":-1,"type":"playTurn"}
+    [房主A] <- played {"seat":1,"name":"机器人 · 阿喜","cards":[15,19,22,26,28],"typeName":"顺子","typeKey":"straight","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":[15,19,22,26,28],"lastSeat":1,"type":"playTurn"}
+    [房主A] <- passed {"seat":2,"name":"机器人 · 阿财","type":"passed"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":[15,19,22,26,28],"lastSeat":1,"type":"playTurn"}
+    [房主A] -> pass {}
+    [房主A] <- passed {"seat":0,"name":"测试房主","type":"passed"}
+    [房主A] <- playTurn {"seat":1,"lastPlay":null,"lastSeat":-1,"type":"playTurn"}
+    [房主A] <- played {"seat":1,"name":"机器人 · 阿喜","cards":[40,43],"typeName":"对子","typeKey":"pair","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":[40,43],"lastSeat":1,"type":"playTurn"}
+    [房主A] <- played {"seat":2,"name":"机器人 · 阿财","cards":[49,50],"typeName":"对子","typeKey":"pair","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":[49,50],"lastSeat":2,"type":"playTurn"}
+    [房主A] -> pass {}
+    [房主A] <- passed {"seat":0,"name":"测试房主","type":"passed"}
+    [房主A] <- playTurn {"seat":1,"lastPlay":[49,50],"lastSeat":2,"type":"playTurn"}
+    [房主A] <- passed {"seat":1,"name":"机器人 · 阿喜","type":"passed"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":null,"lastSeat":-1,"type":"playTurn"}
+    [房主A] <- played {"seat":2,"name":"机器人 · 阿财","cards":[5],"typeName":"单张","typeKey":"single","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":[5],"lastSeat":2,"type":"playTurn"}
+    [房主A] -> play {"cards":[9]}
+    [房主A] <- played {"seat":0,"name":"测试房主","cards":[9],"typeName":"单张","typeKey":"single","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":1,"lastPlay":[9],"lastSeat":0,"type":"playTurn"}
+    [房主A] <- played {"seat":1,"name":"机器人 · 阿喜","cards":[39],"typeName":"单张","typeKey":"single","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":[39],"lastSeat":1,"type":"playTurn"}
+    [房主A] <- played {"seat":2,"name":"机器人 · 阿财","cards":[51],"typeName":"单张","typeKey":"single","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":[51],"lastSeat":2,"type":"playTurn"}
+    [房主A] -> pass {}
+    [房主A] <- passed {"seat":0,"name":"测试房主","type":"passed"}
+    [房主A] <- playTurn {"seat":1,"lastPlay":[51],"lastSeat":2,"type":"playTurn"}
+    [房主A] <- passed {"seat":1,"name":"机器人 · 阿喜","type":"passed"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":null,"lastSeat":-1,"type":"playTurn"}
+    [房主A] <- played {"seat":2,"name":"机器人 · 阿财","cards":[23],"typeName":"单张","typeKey":"single","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":[23],"lastSeat":2,"type":"playTurn"}
+    [房主A] -> play {"cards":[29]}
+    [房主A] <- played {"seat":0,"name":"测试房主","cards":[29],"typeName":"单张","typeKey":"single","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":1,"lastPlay":[29],"lastSeat":0,"type":"playTurn"}
+    [房主A] <- played {"seat":1,"name":"机器人 · 阿喜","cards":[45],"typeName":"单张","typeKey":"single","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":[45],"lastSeat":1,"type":"playTurn"}
+    [房主A] <- passed {"seat":2,"name":"机器人 · 阿财","type":"passed"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":[45],"lastSeat":1,"type":"playTurn"}
+    [房主A] -> pass {}
+    [房主A] <- passed {"seat":0,"name":"测试房主","type":"passed"}
+    [房主A] <- playTurn {"seat":1,"lastPlay":null,"lastSeat":-1,"type":"playTurn"}
+    [房主A] <- played {"seat":1,"name":"机器人 · 阿喜","cards":[3],"typeName":"单张","typeKey":"single","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":[3],"lastSeat":1,"type":"playTurn"}
+    [房主A] <- played {"seat":2,"name":"机器人 · 阿财","cards":[27],"typeName":"单张","typeKey":"single","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":[27],"lastSeat":2,"type":"playTurn"}
+    [房主A] -> play {"cards":[44]}
+    [房主A] <- played {"seat":0,"name":"测试房主","cards":[44],"typeName":"单张","typeKey":"single","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":1,"lastPlay":[44],"lastSeat":0,"type":"playTurn"}
+    [房主A] <- played {"seat":1,"name":"机器人 · 阿喜","cards":[48],"typeName":"单张","typeKey":"single","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":[48],"lastSeat":1,"type":"playTurn"}
+    [房主A] <- passed {"seat":2,"name":"机器人 · 阿财","type":"passed"}
+    [房主A] <- playTurn {"seat":0,"lastPlay":[48],"lastSeat":1,"type":"playTurn"}
+    [房主A] -> pass {}
+    [房主A] <- passed {"seat":0,"name":"测试房主","type":"passed"}
+    [房主A] <- playTurn {"seat":1,"lastPlay":null,"lastSeat":-1,"type":"playTurn"}
+    [房主A] <- played {"seat":1,"name":"机器人 · 阿喜","cards":[7],"typeName":"单张","typeKey":"single","multiplier":2,"type":"played","_rawType":"played"}
+    [房主A] <- gameOver {"winnerSeat":1,"landlordSeat":2,"winnerIsLandlord":false,"multiplier":2,"base":3,"score":{"0":6,"1":6,"2":-12},"revealHands":{"0":[0,2,11,14,17,20,46,47],"1":[
+  S6 对局结束, winner= 1
+
+-- S8 满员拒绝 + 房主游戏中掉线 --
+    [房主A] -> leaveRoom {}
+    [房主A] <- roomClosed {"type":"roomClosed"}
+    [房主A] <- roomList {"rooms":[],"type":"roomList"}
+    [房主A] -> createRoom {}
+    [房主A] <- roomState {"room":{"roomId":"HFDSS","state":"waiting","players":[{"name":"测试房主","isAI":false},null,null],"hostId":"317fte63"},"youSeat":0,"type":"roomState"}
+    [房主A] -> addAI {}
+    [房主A] -> addAI {}
+    [房主A] <- roomList {"rooms":[{"roomId":"HFDSS","players":1,"isFull":false}],"type":"roomList"}
+    [房主A] <- roomState {"room":{"roomId":"HFDSS","state":"waiting","players":[{"name":"测试房主","isAI":false},{"name":"机器人 · 阿喜","isAI":true},null],"hostId":"317fte63"},"youSeat":0,"type
+    [房主A] <- roomList {"rooms":[{"roomId":"HFDSS","players":2,"isFull":false}],"type":"roomList"}
+    [房主A] <- roomState {"room":{"roomId":"HFDSS","state":"waiting","players":[{"name":"测试房主","isAI":false},{"name":"机器人 · 阿喜","isAI":true},{"name":"机器人 · 阿财","isAI":true}],"hostId":"3
+    [房主A] <- roomList {"rooms":[{"roomId":"HFDSS","players":3,"isFull":true}],"type":"roomList"}
+  (B 已重连)
+  已确认: 满员房间拒绝加入
+    [房主A] -> startGame {}
+    [房主A] <- gameStart {"seat":0,"hand":[2,5,8,11,23,25,28,29,31,34,39,40,42,45,46,49,50],"bottomCount":3,"callingSeat":1,"type":"gameStart"}
+    [房主A] <- bidTurn {"seat":1,"type":"bidTurn"}
+    [房主A] <- bidResult {"seat":1,"name":"机器人 · 阿喜","bid":2,"type":"bidResult"}
+    [房主A] <- bidTurn {"seat":2,"type":"bidTurn"}
+    [房主A] <- bidResult {"seat":2,"name":"机器人 · 阿财","bid":3,"type":"bidResult"}
+    [房主A] <- landlordSet {"landlordSeat":2,"bottomCards":[10,44,15],"hand":[2,5,8,11,23,25,28,29,31,34,39,40,42,45,46,49,50],"seat":0,"type":"landlordSet"}
+    [房主A] <- system {"message":"机器人 · 阿财 成为地主，叫 3 分","type":"system"}
+    [房主A] <- playTurn {"seat":2,"lastPlay":null,"lastSeat":-1,"type":"playTurn"}
+  已确认: 房主游戏中掉线 → 房间解散
+
+================ 测试完成 ================
+[证据] played 消息到达客户端时的实际 type 字段: played（应为 played）
+共发现 0 个协议/逻辑层面问题：
+  高: 0  中: 0  低: 0
+全部检查通过，未发现问题。

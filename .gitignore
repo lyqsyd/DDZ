@@ -1,0 +1,16 @@
+node_modules
+dist
+
+# 运行时持久化数据
+stats.json
+
+# 临时构建产物
+motion-web-main.zip
+test-output.log
+
+# 测试临时脚本
+_*.js
+
+# 编辑器 / 系统
+.DS_Store
+Thumbs.db

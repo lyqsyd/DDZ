@@ -1,0 +1,12 @@
+{
+  "name": "hlddz-lan",
+  "version": "1.0.0",
+  "description": "局域网欢乐斗地主 - LAN Happy Dou Dizhu (Landlord)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}
